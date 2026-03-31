@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 Puzzle Solver</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>8 Puzzle Solver | AI Search Techniques</h1>
+
+<div class="layout">
+
+<div class="panel">
+
+<h3>Initial State</h3>
+<div id="initial-grid" class="grid"></div>
+
+<button onclick="randomInitial()">Load Example</button>
+<button onclick="clearGrid('initial')">Clear</button>
+
+<h3>Goal State</h3>
+<div id="goal-grid" class="grid"></div>
+
+<button onclick="randomGoal()">Load Example</button>
+<button onclick="clearGrid('goal')">Clear</button>
+
+</div>
+
+<div class="panel">
+
+<h3>Search Technique</h3>
+
+<label><input type="radio" name="algo" value="astar" checked> A*</label>
+<label><input type="radio" name="algo" value="bfs"> BFS</label>
+<label><input type="radio" name="algo" value="dfs"> DFS</label>
+
+<br><br>
+
+<button onclick="solve()">Solve</button>
+<button onclick="clearAll()">Clear All</button>
+
+<h3>Results</h3>
+
+<div id="results">
+Time: -<br>
+Nodes Expanded: -<br>
+Path Cost: -
+</div>
+
+</div>
+
+<div class="panel">
+
+<h3>Visualization</h3>
+
+<div id="viz-grid" class="grid big"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
